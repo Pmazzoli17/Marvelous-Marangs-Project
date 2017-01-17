@@ -1,0 +1,114 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>#mood application</title>
+
+	<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+</head>
+<body>
+	<div class="container">
+	<!-- #Mood Jumbotron -->
+    	<div class="jumbotron" style="background-color: green; color: white;">
+      		<div class="container">
+        		<h1 class="text-center"><strong>#Mood</strong></h1>
+	     	
+			</div>
+      	</div>
+
+      	<div class="text-center">
+
+      	<!-- Email input field -->     	
+      		Email: <label for="email"><input type="text" name="email"  id="userEmail"/></label>
+
+      	</div>
+		<div>
+			
+			<h1 class="text-center" id="question">What's your mood?</h1>
+
+		</div>
+
+
+    
+    	<br>
+    	<!-- Mood Button Div -->
+		<div class="text-center"> 
+				<button id="angry" type="button" class="btn btn-danger">Angry</button> 
+				<button id="Anxious" type="button" class="btn btn-warning">Anxious</button>      		
+				<button id="happy" type="button" class="btn btn-success">Happy</button>
+				<button id="romantic" type="button" class="btn btn-danger" style="background-color: pink">Romantic</button>
+				<button id="sad" type="button" class="btn btn-info">Sad</button>
+				<!-- Trigger the modal with a button -->
+  				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+				
+				<!-- Help Modal -->
+			  <div class="modal fade" id="myModal" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content-->
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h3 class="modal-title">#MOOD HELP</h3>
+			        </div>
+			        <div id="modal" class="modal-body">
+			          <p>The mood app allows you to choose the mood you're feeling and then we provide content (audio and images) reflective of that mood. Don't be afraid to pick a mood because just as fast as our feelings change, so can #mood. Go ahead, give us a try!!
+					  </p>
+					  <br>
+					  <p> The mood app team...</p>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        </div>
+			      </div>
+			      
+			    </div>
+			  </div>
+  
+</div>
+				
+    	</div>
+    	<!-- mood audio and image Div -->
+		<div class="container">
+  			<div class="row">
+  			<!-- Audio Div -->
+    			<div class="col-sm-6">
+   
+      			<h2>Music for your mood</h2>
+      			<!-- Audio Temp outline placeholder -->
+					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+		    			<iframe class="embed-responsive-item" src=""></iframe>
+					</div>
+    			</div>
+
+			<!-- images Div -->
+    			<div class="col-sm-6"> 
+
+      			<h2>Images for your mood</h2>
+      			<!-- Images Temp outline placeholder -->
+					<div style="border: 1px solid black"class="embed-responsive embed-responsive-16by9">
+					    <iframe class="embed-responsive-item" src=""></iframe>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	</div>
+
+<script>
+/* 
+$("#modal").width(150)
+			.text("I am altering the body of text")
+			.height(50)
+			.fadeIn(2000);
+			*/
+</script>	
+</body>
+</html>

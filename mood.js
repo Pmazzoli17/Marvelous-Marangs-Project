@@ -1,5 +1,6 @@
-alert("entering mood js");
-// Initialize Firebase
+
+  // Initialize Firebase
+
   var config = {
     apiKey: "AIzaSyB6Ci3DroFdkgx-eOP-95QmDoGbqIH1-34",
     authDomain: "marvelous-marangs-project.firebaseapp.com",
@@ -37,7 +38,11 @@ alert("entering mood js");
       console.log(snapshot.val());
 
       // Log the value of the various properties
+
       console.log("email value   " + snapshot.val().email);
+
+      console.log(snapshot.val().email);
+
 
       // If any errors are experienced, log them to console.
     }, function(errorObject) {
@@ -45,6 +50,7 @@ alert("entering mood js");
     });
 
 // Mood Buttons
+
 
 $("#angry").click(function(){
 
@@ -150,5 +156,18 @@ $("#sad").click(function(){
  // Mood audio and image Div 
 
  // Images Div
+
+
+
+
+// Mood audio and image Div 
+
+
+
+
+// Images Div
+
+
+
 
 

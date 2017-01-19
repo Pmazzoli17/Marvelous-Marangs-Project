@@ -27,27 +27,7 @@
       // Prevent the page from refreshing
       return false;
     });
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// var videos = [];
-
-//       // displayVideo function renders the HTML to display the appropriate content
-//       function displayVideo() {
-
-//         var video = $(this).attr("data-name");
-//         var queryURL = "https://www.googleapis.com/youtube/v3/search?part=angry&q=screamo%7Cmetal%7Cpunk%7Cdeathmetal+-emo+&safeSearch=none&key={AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY}";
-
-//     // Creating an AJAX call for the specific video -ML
-//         $.ajax({
-//           url: queryURL,
-//           method: "GET"
-//         }).done(function(response) {
-
-//         })
-
-        
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~          
+         
 
     // Firebase is always watching for changes to the data.
     // When changes occurs it will print them to console and html
@@ -85,6 +65,8 @@
       });
 
 
+// The search URL for the anxious button. 
+// GET https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=20&order=relevance&q=relax%7Cmeditate%7Ccalm&safeSearch=none&type=video&videoCaption=any&videoDefinition=any&videoDimension=any&videoDuration=any&videoEmbeddable=true&videoLicense=any&videoSyndicated=any&videoType=any&key={YOUR_API_KEY}
 
 
 // Mood audio and image Div 

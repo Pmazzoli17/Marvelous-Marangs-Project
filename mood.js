@@ -1,4 +1,6 @@
+
   // Initialize Firebase
+
   var config = {
     apiKey: "AIzaSyB6Ci3DroFdkgx-eOP-95QmDoGbqIH1-34",
     authDomain: "marvelous-marangs-project.firebaseapp.com",
@@ -57,7 +59,11 @@
       console.log(snapshot.val());
 
       // Log the value of the various properties
+
+      console.log("email value   " + snapshot.val().email);
+
       console.log(snapshot.val().email);
+
 
       // If any errors are experienced, log them to console.
     }, function(errorObject) {
@@ -85,6 +91,112 @@
       });
 
 
+$("#angry").click(function(){
+
+	// Get mood button value
+	var buttonResult = $(this).prop("value");
+
+	// Log mood button value to console 
+	console.log("You are feeling  " + $(this).prop("value"));
+	 
+	
+	// Write mood chosen into chosenMood div
+	$("#chosenMood").html("Your current mood is  "+ buttonResult);
+
+    /**********************************************************/
+    /* Once the mood is identified and saved, we need         */
+    /* (1)query our music api for audio that matches the mood.*/ 
+    /* (2)query our image api for images that match this      */
+    /* mood                                                   */
+    /**********************************************************/
+ });
+  
+ $("#anxious").click(function(){
+
+ 	// Get mood button value
+	var buttonResult = $(this).prop("value");
+
+	// Log mood button value to console 
+	console.log("You are feeling  " + buttonResult);
+	
+
+	// Write mood chosen into chosenMood div
+	$("#chosenMood").text("Your current mood is  "+ buttonResult);
+
+	/**********************************************************/
+    /* Once the mood is identified and saved, we need         */
+    /* (1)query our music api for audio that matches the mood.*/ 
+    /* (2)query our image api for images that match this      */
+    /* mood                                                   */
+    /**********************************************************/
+  
+ });			
+		
+$("#happy").click(function(){
+
+	// Get mood button value
+	var buttonResult = $(this).prop("value");
+
+	// Log mood button value to console
+	console.log("You are feeling  " + buttonResult);
+
+	// Write mood chosen into chosenMood div
+	$("#chosenMood").text("Your current mood is  "+ buttonResult);
+	/**********************************************************/
+    /* Once the mood is identified and saved, we need         */
+    /* (1)query our music api for audio that matches the mood.*/ 
+    /* (2)query our image api for images that match this      */
+    /* mood                                                   */
+    /**********************************************************/
+  
+ });	
+
+$("#romantic").click(function(){
+
+	// Get mood button value
+	var buttonResult = $(this).prop("value");
+
+	// Log mood button value to console
+	console.log("You are feeling  " + buttonResult);
+	
+	// Write mood chosen into chosenMood div
+	$("#chosenMood").text("Your current mood is  "+ buttonResult);
+	/**********************************************************/
+    /* Once the mood is identified and saved, we need         */
+    /* (1)query our music api for audio that matches the mood.*/ 
+    /* (2)query our image api for images that match this      */
+    /* mood                                                   */
+    /**********************************************************/
+  
+ });	
+
+$("#sad").click(function(){
+
+	// Get mood button value
+	var buttonResult = $(this).prop("value");
+
+	// Log mood button value to console
+	console.log("You are feeling  " + buttonResult);
+	
+	// Write mood chosen into chosenMood div
+	$("#chosenMood").text("Your current mood is  "+buttonResult);
+    /**********************************************************/
+    /* Once the mood is identified and saved, we need         */
+    /* (1)query our music api for audio that matches the mood.*/ 
+    /* (2)query our image api for images that match this      */
+    /* mood                                                   */
+    /**********************************************************/
+ });
+
+
+
+
+ 
+ // Mood audio and image Div 
+
+ // Images Div
+
+
 
 
 // Mood audio and image Div 
@@ -93,6 +205,7 @@
 
 
 // Images Div
+
 
 
 

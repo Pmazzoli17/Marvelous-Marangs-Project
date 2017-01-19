@@ -30,6 +30,27 @@
       return false;
     });
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// var videos = [];
+
+//       // displayVideo function renders the HTML to display the appropriate content
+//       function displayVideo() {
+
+//         var video = $(this).attr("data-name");
+//         var queryURL = "https://www.googleapis.com/youtube/v3/search?part=angry&q=screamo%7Cmetal%7Cpunk%7Cdeathmetal+-emo+&safeSearch=none&key={AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY}";
+
+//     // Creating an AJAX call for the specific video -ML
+//         $.ajax({
+//           url: queryURL,
+//           method: "GET"
+//         }).done(function(response) {
+
+//         })
+
+        
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~          
+
     // Firebase is always watching for changes to the data.
     // When changes occurs it will print them to console and html
     database.ref().on("value", function(snapshot) {
@@ -48,8 +69,26 @@
     }, function(errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
+  
+
 
 // Mood Buttons
+
+    // This function handles events where a mood button is clicked -ML
+        $("button").on("click", function() {
+          var x = $(this).data("mood");
+            console.log(x);
+
+        var queryURL = "https://www.googleapis.com/youtube/v3/search?part=angry&q=screamo%7Cmetal%7Cpunk%7Cdeathmetal+-emo+&safeSearch=none&key={AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY}";
+   
+        // Creating an AJAX call for the specific video -ML
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+          console.log(response);
+        });
+      });
 
 
 $("#angry").click(function(){

@@ -69,6 +69,26 @@
         });
       });
 
+// Getty Ajax Buttons
+
+    // This function handles events where a mood button is clicked -ML
+        $("button").on("click", function() {
+          var x = $(this).data("mood");
+            console.log(x);
+
+        var queryURL = "https://api.gettyimages.com/v3/search/images?phrase=fish"
+        // Creating an AJAX call for the specific video -ML
+        $.ajax({
+          url: queryURL,
+          method: "GET",
+          headers: {
+            "Api-Key": "vtursd42ae565q3fnpsymhq5"
+          }
+        }).done(function(response) {
+          console.log(response);
+        });
+      });
+
 
 // The search URL for the anxious button. 
 // GET https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=20&order=relevance&q=relax%7Cmeditate%7Ccalm&safeSearch=none&type=video&videoCaption=any&videoDefinition=any&videoDimension=any&videoDuration=any&videoEmbeddable=true&videoLicense=any&videoSyndicated=any&videoType=any&key={YOUR_API_KEY}

@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -43,11 +43,11 @@
     	<br>
     	<!-- Mood Button Div -->
 		<div class="text-center"> 
-				<button id="angry" type="button" class="btn btn-danger">Angry</button> 
-				<button id="anxious" type="button" class="btn btn-warning">Anxious</button>      		
-				<button id="happy" type="button" class="btn btn-success">Happy</button>
-				<button id="romantic" type="button" class="btn btn-danger" style="background-color: pink">Romantic</button>
-				<button id="sad" type="button" class="btn btn-info">Sad</button>
+				<button data-mood="mad" id="angry" type="button" value="angry" class="btn btn-danger">Angry</button> 
+				<button data-mood="stressed" id="anxious" type="button" value="anxious" class="btn btn-warning">Anxious</button>      		
+				<button data-mood="joyful" id="happy" type="button" value="happy" class="btn btn-success">Happy</button>
+				<button data-mood="love" id="romantic" type="button" value="romantic"class="btn btn-danger" style="background-color: pink">Romantic</button>
+				<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 				<!-- Trigger the modal with a button -->
   				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
 				
@@ -71,10 +71,21 @@
 			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			        </div>
 			      </div>
+
+
+			      
 			      
 			    </div>
 			  </div>
-  
+ 
+<br>
+		<!-- Div to contain stated mood -->
+		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+				<h2 class="text-center" id="chosenMood"></h2>
+		</div>
+
+
+
 </div>
 				
     	</div>
@@ -104,7 +115,6 @@
 		</div>
 
 	</div>
-
 
 <script src="mood.js"></script>
 

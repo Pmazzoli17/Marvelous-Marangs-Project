@@ -29,6 +29,7 @@
       // Prevent the page from refreshing
       return false;
     });
+         
 
     // Firebase is always watching for changes to the data.
     // When changes occurs it will print them to console and html
@@ -48,9 +49,29 @@
     }, function(errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
+  
+
 
 // Mood Buttons
 
+    // This function handles events where a mood button is clicked -ML
+        $("button").on("click", function() {
+          var x = $(this).data("mood");
+            console.log(x);
+
+        var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=screamo%7Cpunk%7Cmetal&safeSearch=none&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+        // Creating an AJAX call for the specific video -ML
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+          console.log(response);
+        });
+      });
+
+
+// The search URL for the anxious button. 
+// GET https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=20&order=relevance&q=relax%7Cmeditate%7Ccalm&safeSearch=none&type=video&videoCaption=any&videoDefinition=any&videoDimension=any&videoDuration=any&videoEmbeddable=true&videoLicense=any&videoSyndicated=any&videoType=any&key={YOUR_API_KEY}
 
 $("#angry").click(function(){
 
@@ -59,6 +80,7 @@ $("#angry").click(function(){
 
 	// Log mood button value to console 
 	console.log("You are feeling  " + $(this).prop("value"));
+});
 	 
 	
 	// Write mood chosen into chosenMood div
@@ -70,7 +92,7 @@ $("#angry").click(function(){
     /* (2)query our image api for images that match this      */
     /* mood                                                   */
     /**********************************************************/
- });
+ 
   
  $("#anxious").click(function(){
 
@@ -106,7 +128,7 @@ $("#happy").click(function(){
 	/**********************************************************/
     /* Once the mood is identified and saved, we need         */
     /* (1)query our music api for audio that matches the mood.*/ 
-    /* (2)query our image api for images that match this      */
+     // (2)query our image api for images that match this      
     /* mood                                                   */
     /**********************************************************/
   
@@ -156,8 +178,6 @@ $("#sad").click(function(){
  // Mood audio and image Div 
 
  // Images Div
-
-
 
 
 // Mood audio and image Div 

@@ -80,12 +80,12 @@ $("#angry").click(function(){
 
 	// Log mood button value to console 
 	console.log("You are feeling  " + $(this).prop("value"));
-});
+// });
 	 
 	
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").html("Your current mood is  "+ buttonResult);
-
+	$("#chosenMood").html("Your current mood is  "+ buttonResult); 
+});
     /**********************************************************/
     /* Once the mood is identified and saved, we need         */
     /* (1)query our music api for audio that matches the mood.*/ 

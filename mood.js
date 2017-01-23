@@ -29,7 +29,6 @@
       // Prevent the page from refreshing
       return false;
     });
-         
 
     // Firebase is always watching for changes to the data.
     // When changes occurs it will print them to console and html
@@ -51,21 +50,58 @@
     });
   
 
+// Process Mood Buttons
 
-// Mood Buttons
+    // This event handler processes click events from mood buttons -ML
+    // It defines a set of youTube search queryURLs that will be selected based
+    // on the value of the mood and subsequently used in the AJAX call to the
+    // the youtube API 
 
-    // This function handles events where a mood button is clicked -ML
+
         $("button").on("click", function() {
           var x = $(this).data("mood");
-            console.log(x);
 
-        var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=screamo%7Cpunk%7Cmetal&safeSearch=none&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
-        // Creating an AJAX call for the specific video -ML
+          // Debug code
+          // console.log("x =   " + x);            
+
+          // Define youTube API search strings for different moods 
+          var queryURL1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=1&order=relevance&q=punk+music&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+          var queryURL2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=1&order=relevance&q=anxious+music&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+          var queryURL3 = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=1&order=relevance&q=happy+music&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+          var queryURL4 = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=1&order=relevance&q=Romantic+music&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+          var queryURL5 = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=1&order=relevance&q=Sad+music&key=AIzaSyBBEEEI-f9EGzUSAvYkAPB83lHwLGrs3wY";
+          
+        // These conditional statements set the queryURL string based on 
+        // the type of mood that was selected by the user - ML
+
+          if (x==="mad") {
+            queryURL=queryURL1;
+            } 
+            else if (x==="stressed"){
+              queryURL=queryURL2;
+              }
+            else if (x==="joyful") {
+              queryURL=queryURL3;
+
+              }
+            else if (x==="love") {
+              queryURL=queryURL4;
+              }
+            else {
+              queryURL=queryURL5;
+            }  
+          
+        // Creating an AJAX call to pull video info from youtube - ML
         $.ajax({
           url: queryURL,
           method: "GET"
         }).done(function(response) {
-          console.log(response);
+          
+        // obtain videoID for playback - ML
+          videoID=response.items[0].id.videoId;
+          console.log(x + " videoId =  " + videoID);
+ 
+          $("#video-link").replaceWith('<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/'+ videoID +'"></iframe>');
         });
       });
 
@@ -74,9 +110,10 @@
     // This function handles events where a mood button is clicked -ML
         $("button").on("click", function() {
           var x = $(this).data("mood");
-            console.log(x);
 
-        var queryURL = "https://api.gettyimages.com/v3/search/images?phrase=fish"
+        // Setting the queryURL for images API - ML 
+          var queryURL = "https://api.gettyimages.com/v3/search/images?phrase=fish"
+
         // Creating an AJAX call for the specific video -ML
         $.ajax({
           url: queryURL,
@@ -85,7 +122,9 @@
             "Api-Key": "vtursd42ae565q3fnpsymhq5"
           }
         }).done(function(response) {
-          console.log(response);
+
+        // Debug code - ML
+        // console.log(response);
         });
       });
 
@@ -99,20 +138,15 @@ $("#angry").click(function(){
 	var buttonResult = $(this).prop("value");
 
 	// Log mood button value to console 
-	console.log("You are feeling  " + $(this).prop("value"));
+	console.log("Your mood is  " + $(this).prop("value"));
 // });
 	 
 	
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").html("Your current mood is  "+ buttonResult); 
+	$("#chosenMood").html("Your mood is  "+ buttonResult + " check out the sounds & images we've chosen"); 
+  
 });
-    /**********************************************************/
-    /* Once the mood is identified and saved, we need         */
-    /* (1)query our music api for audio that matches the mood.*/ 
-    /* (2)query our image api for images that match this      */
-    /* mood                                                   */
-    /**********************************************************/
- 
+    
   
  $("#anxious").click(function(){
 
@@ -124,15 +158,8 @@ $("#angry").click(function(){
 	
 
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult);
-
-	/**********************************************************/
-    /* Once the mood is identified and saved, we need         */
-    /* (1)query our music api for audio that matches the mood.*/ 
-    /* (2)query our image api for images that match this      */
-    /* mood                                                   */
-    /**********************************************************/
-  
+	$("#chosenMood").text("Your mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+	  
  });			
 		
 $("#happy").click(function(){
@@ -144,14 +171,8 @@ $("#happy").click(function(){
 	console.log("You are feeling  " + buttonResult);
 
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult);
-	/**********************************************************/
-    /* Once the mood is identified and saved, we need         */
-    /* (1)query our music api for audio that matches the mood.*/ 
-     // (2)query our image api for images that match this      
-    /* mood                                                   */
-    /**********************************************************/
-  
+	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+	  
  });	
 
 $("#romantic").click(function(){
@@ -163,14 +184,8 @@ $("#romantic").click(function(){
 	console.log("You are feeling  " + buttonResult);
 	
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult);
-	/**********************************************************/
-    /* Once the mood is identified and saved, we need         */
-    /* (1)query our music api for audio that matches the mood.*/ 
-    /* (2)query our image api for images that match this      */
-    /* mood                                                   */
-    /**********************************************************/
-  
+	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+	  
  });	
 
 $("#sad").click(function(){
@@ -182,13 +197,8 @@ $("#sad").click(function(){
 	console.log("You are feeling  " + buttonResult);
 	
 	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+buttonResult);
-    /**********************************************************/
-    /* Once the mood is identified and saved, we need         */
-    /* (1)query our music api for audio that matches the mood.*/ 
-    /* (2)query our image api for images that match this      */
-    /* mood                                                   */
-    /**********************************************************/
+	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+    
  });
 
 

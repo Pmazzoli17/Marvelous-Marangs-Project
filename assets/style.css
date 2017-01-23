@@ -1,0 +1,32 @@
+
+
+/*# sourceMappingURL=style.css.map */
+
+.jumbotron {
+	background-color: green; 
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#pageTitle {
+	font-family: 'Bungee Inline', cursive;
+	font-size: 100px;
+}
+
+#question {
+	font-family: 'Bungee Shade', cursive;
+}
+
+.btn-danger {
+	background-color: pink;
+	border: none;
+}
+
+#angry {
+	background-color: red;
+}

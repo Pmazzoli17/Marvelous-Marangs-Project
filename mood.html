@@ -7,7 +7,12 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');</style>
+<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');</style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+ -->  
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   
@@ -19,11 +24,10 @@
 <body>
 	<div class="container">
 	<!-- #Mood Jumbotron -->
-    	<div class="jumbotron" style="background-color: green; color: white;">
+    	<div class="jumbotron">
       		<div class="container">
-        		<h1 class="text-center"><strong>#Mood</strong></h1>
-	     	
-			</div>
+        		<h1 class="text-center" id="pageTitle"><strong>#Mood</strong></h1>
+	     	</div>
       	</div>
 
       	<div class="text-center">
@@ -46,10 +50,10 @@
 				<button data-mood="mad" id="angry" type="button" value="angry" class="btn btn-danger">Angry</button> 
 				<button data-mood="stressed" id="anxious" type="button" value="anxious" class="btn btn-warning">Anxious</button>      		
 				<button data-mood="joyful" id="happy" type="button" value="happy" class="btn btn-success">Happy</button>
-				<button data-mood="love" id="romantic" type="button" value="romantic"class="btn btn-danger" style="background-color: pink">Romantic</button>
+				<button data-mood="love" id="romantic" type="button" value="romantic" class="btn btn-danger">Romantic</button>
 				<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 				<!-- Trigger the modal with a button -->
-  				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+  				<button id="help" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
 				
 				<!-- Help Modal -->
 			  <div class="modal fade" id="myModal" role="dialog">
@@ -80,10 +84,10 @@
  
 <br>
 		<!-- Div to contain stated mood -->
-		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
-
+ -->
 
 
 </div>
@@ -97,7 +101,7 @@
    
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
-					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+					<div class="embed-responsive embed-responsive-16by9">
 		    			<iframe class="embed-responsive-item" src=""></iframe>
 					</div>
     			</div>
@@ -107,7 +111,7 @@
 
       			<h2>Images for your mood</h2>
       			<!-- Images Temp outline placeholder -->
-					<div style="border: 1px solid black"class="embed-responsive embed-responsive-16by9">
+					<div class="embed-responsive embed-responsive-16by9">
 					    <iframe class="embed-responsive-item" src=""></iframe>
 					</div>
 				</div>
@@ -118,11 +122,5 @@
 
 <script src="mood.js"></script>
 
-<!-- /* 
-$("#modal").width(150)
-			.text("I am altering the body of text")
-			.height(50)
-			.fadeIn(2000);
-			*/	 -->
 </body>
 </html>

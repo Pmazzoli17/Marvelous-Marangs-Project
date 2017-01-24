@@ -16,30 +16,30 @@
   font-family: 'Bungee Shade', cursive; }
 
 .btn-danger {
-  background-color: pink;
-  border: 1px solid black; }
+  background-color: #D70060;
+  border: 1px solid #000000; }
 
 #angry {
   background-color: red;
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 #anxious {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 #happy {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 #romantic {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 #sad {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 #help {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 .embed-responsive {
-  border: 1px solid black; }
+  border: 1px solid #000000; }
 
 h2 {
   text-align: center;

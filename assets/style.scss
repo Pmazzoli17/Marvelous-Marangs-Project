@@ -4,8 +4,8 @@
 // $lightGreen: #61AE24;
 // $yellow: #D0D102;
 // $green: #32742C;
-// $pink: #D70060;
-
+ $pink: #D70060;
+ $black: #000000;
 // .jumbotron {
 // 	@include background:(linear-gradient(to bottom, $blue, $seaGreen, $notQuiteBlue, $lightGreen, $yellow, $green, $pink))
 // }
@@ -35,37 +35,37 @@
 }
 
 .btn-danger {
-	background-color: pink;
-	border: 1px solid black;
+	background-color: $pink;
+	border: 1px solid $black;
 }
 
 #angry {
 	background-color: red;
-	border: 1px solid black;
+	border: 1px solid $black;
 }	
 
 #anxious {
-	border: 1px solid black;
+	border: 1px solid $black;
 }
 
 #happy {
-	border: 1px solid black;
+	border: 1px solid $black;
 }
 
 #romantic {
-	border: 1px solid black;
+	border: 1px solid $black;
 }
 
 #sad {
-	border: 1px solid black;
+	border: 1px solid $black;
 }
 
 #help {
-	border: 1px solid black;
+	border: 1px solid $black;
 }
 
 .embed-responsive {
-	border: 1px solid black
+	border: 1px solid $black
 }
 
 h2 {

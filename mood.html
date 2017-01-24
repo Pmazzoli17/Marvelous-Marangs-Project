@@ -12,8 +12,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/style.scss">
-  
+ -->  
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   
@@ -54,7 +53,7 @@
 				<button data-mood="love" id="romantic" type="button" value="romantic" class="btn btn-danger">Romantic</button>
 				<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 				<!-- Trigger the modal with a button -->
-  				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+  				<button id="help" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
 				
 				<!-- Help Modal -->
 			  <div class="modal fade" id="myModal" role="dialog">
@@ -85,10 +84,10 @@
  
 <br>
 		<!-- Div to contain stated mood -->
-		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
-
+ -->
 
 
 </div>
@@ -102,7 +101,7 @@
    
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
-					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+					<div class="embed-responsive embed-responsive-16by9">
 		    			<iframe class="embed-responsive-item" src=""></iframe>
 					</div>
     			</div>
@@ -112,7 +111,7 @@
 
       			<h2>Images for your mood</h2>
       			<!-- Images Temp outline placeholder -->
-					<div style="border: 1px solid black"class="embed-responsive embed-responsive-16by9">
+					<div class="embed-responsive embed-responsive-16by9">
 					    <iframe class="embed-responsive-item" src=""></iframe>
 					</div>
 				</div>
@@ -123,11 +122,5 @@
 
 <script src="mood.js"></script>
 
-<!-- /* 
-$("#modal").width(150)
-			.text("I am altering the body of text")
-			.height(50)
-			.fadeIn(2000);
-			*/	 -->
 </body>
 </html>

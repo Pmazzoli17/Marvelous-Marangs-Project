@@ -72,3 +72,8 @@ h2 {
 	text-align: center;
 	font-family: 'Bungee Shade', cursive;
 }
+=======
+@import "variables";
+@import "global-style";
+
+// sass --watch assets/scss:assets/css

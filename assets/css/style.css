@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline");
 .jumbotron {
   background-color: green;
   color: white;
@@ -9,36 +11,23 @@
   padding-bottom: 5px; }
 
 #pageTitle {
-  font-family: 'Bungee Inline', cursive;
+  font-family: "Bungee Shade", cursive;
   font-size: 100px; }
 
 #question {
-  font-family: 'Bungee Shade', cursive; }
+  font-family: "Bungee Inline", cursive; }
 
 .btn-danger {
   background-color: #D70060;
   border: 1px solid #000000; }
 
 #angry {
-  background-color: red;
-  border: 1px solid #000000; }
+  background-color: red; }
 
-#anxious {
-  border: 1px solid #000000; }
+#angry :hover {
+  background-color: #b20000; }
 
-#happy {
-  border: 1px solid #000000; }
-
-#romantic {
-  border: 1px solid #000000; }
-
-#sad {
-  border: 1px solid #000000; }
-
-#help {
-  border: 1px solid #000000; }
-
-.embed-responsive {
+#angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
   border: 1px solid #000000; }
 
 h2 {

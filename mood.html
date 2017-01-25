@@ -5,19 +5,11 @@
 	<title>#mood application</title>
 
 
-	<!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
-  -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');</style>
-<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');</style>
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -62,7 +54,7 @@
 
     	<br>
     	<!-- Mood Button Div -->
-		<div class="text-center"> 
+		<div class="text-center" class="moodList"> 
 				<button data-mood="mad" id="angry" type="button" value="angry" class="btn btn-danger">Angry</button> 
 				<button data-mood="stressed" id="anxious" type="button" value="anxious" class="btn btn-warning">Anxious</button>      		
 				<button data-mood="joyful" id="happy" type="button" value="happy" class="btn btn-success">Happy</button>
@@ -98,41 +90,20 @@
 			    </div>
 			  </div>
  
-<br>
-		<!-- Div to contain stated mood -->
-
-		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
-				<h2 class="text-center" id="chosenMood"></h2>
-		</div>
- -->
+<br><br>
 
 
-		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
-				<h2 class="text-center" id="chosenMood"></h2>
-		</div> -->
-
-
-
-
-		<!--<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
-				<h2 class="text-center" id="chosenMood"></h2> 
-		</div> -->
-		<br>
-		<!-- <h2></h2> -->
-
-
-		<!-- Code may be duplicated in CSS. -->
   		<div class="panel panel-default">
     		<div class="panel-body">
 			<h4 id="chosenMood" class="text-center"></h4>
     		</div>
   		</div>
-		<!--Code may be duplicated in CSS  -->
-		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+		
+		<div class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
 
-</div>
+		</div>
 				
     	</div>
     	<!-- mood audio and image Div -->
@@ -144,12 +115,11 @@
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
 
-<!-- Code may be duplicated in css. -->
 
 					<div class="embed-responsive embed-responsive-16by9">
 		    			<iframe class="embed-responsive-item" src=""></iframe>
 
-					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+					<div class="embed-responsive embed-responsive-16by9">
 		    			<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/3MteSlpxCpo"></iframe>
 
 					</div>
@@ -162,16 +132,15 @@
       			<h2>Images for your mood</h2>
       			<!-- Images Temp outline placeholder -->
 
-	<!-- Code may be duplicate in CSS. -->
 
 					<div class="embed-responsive embed-responsive-16by9">
 					    <iframe class="embed-responsive-item" src=""></iframe>
-			<!-- Code may be duplicated in CSS. -->
-					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+			
+					<div class="embed-responsive embed-responsive-16by9">
 					    <iframe id="imageholder" class="embed-responsive-item" src="https://www.youtube.com/embed/mkfnTeBB6EI"></iframe>
 					</div>
-				</div>
-  			</div>
+					</div>
+  					</div>
 		</div>
 
 	</div>

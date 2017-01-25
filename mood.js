@@ -1,54 +1,51 @@
 
   // Initialize Firebase
-
   var config = {
-    apiKey: "AIzaSyB6Ci3DroFdkgx-eOP-95QmDoGbqIH1-34",
-    authDomain: "marvelous-marangs-project.firebaseapp.com",
-    databaseURL: "https://marvelous-marangs-project.firebaseio.com",
-    storageBucket: "marvelous-marangs-project.appspot.com",
-    messagingSenderId: "897117282396"
+    apiKey: "AIzaSyB5mnXOmk-joFswh_H0tztREWkzOhRahOw",
+    authDomain: "validation-67fa0.firebaseapp.com",
+    databaseURL: "https://validation-67fa0.firebaseio.com",
+    storageBucket: "validation-67fa0.appspot.com",
+    messagingSenderId: "580480157286"
     };
-
+    
     firebase.initializeApp(config);
 
-  // Create a variable to reference the database
-  var database = firebase.database();
+    // Create a variable to reference the database
+    var database = firebase.database();
 
-  // Email input field 
-    // Click Button changes what is stored in firebase
-    $("#submit").on("click", function() {
+    var email = "";
 
-      // Get inputs
-      email = $("#userEmail").val().trim();
+    // Capture Button Click
+    $("#add-user").on("click", function() {
 
-      // Change what is saved in firebase
-      database.ref().set({
+    // Code for storing and retrieving the most recent email.
+
+      email = $("#email-input").val().trim();
+
+      database.ref().push({
         email: email,
-      });
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
+        })
 
-      // Prevent the page from refreshing
-      return false;
-    });
+      // Don't refresh the page!
+      // return false;
+    })
 
-    // Firebase is always watching for changes to the data.
-    // When changes occurs it will print them to console and html
-    database.ref().on("value", function(snapshot) {
+    database.ref().on("child_added", function(snapshot) {
+    $(".well").append("<p>"+snapshot.val().email+"</p>");
+    $(".well").append("<hr>");
+    })
 
-      // Print the initial data to the console.
+
+    // Create Firebase "watcher" Hint: .on("value")
+      firebase.database().ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+    // Log everything that's coming out of snapshot
       console.log(snapshot.val());
-
-      // Log the value of the various properties
-
-      console.log("email value   " + snapshot.val().email);
-
       console.log(snapshot.val().email);
 
-
-      // If any errors are experienced, log them to console.
-    }, function(errorObject) {
-      console.log("The read failed: " + errorObject.code);
-    });
-  
+    // Change the HTML to reflect in the most recent area
+      $("#email-display").html(snapshot.val().email);
+})
 
 // Process Mood Buttons
 

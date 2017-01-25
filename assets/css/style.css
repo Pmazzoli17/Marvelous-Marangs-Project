@@ -1,0 +1,58 @@
+.jumbotron {
+  background-color: green;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+#pageTitle {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 100px; }
+
+#question {
+  font-family: 'Bungee Shade', cursive; }
+
+.btn-danger {
+  background-color: #D70060;
+  border: 1px solid #000000; }
+
+#angry {
+  background-color: red;
+  border: 1px solid #000000; }
+
+#anxious {
+  border: 1px solid #000000; }
+
+#happy {
+  border: 1px solid #000000; }
+
+#romantic {
+  border: 1px solid #000000; }
+
+#sad {
+  border: 1px solid #000000; }
+
+#help {
+  border: 1px solid #000000; }
+
+.embed-responsive {
+  border: 1px solid #000000; }
+
+h2 {
+  text-align: center;
+  font-family: 'Bungee Shade', cursive; }
+
+#angle-gradient-svg {
+  background: #ff0faf;
+  background: -moz-linear-gradient(45deg, #ff0faf 0%, rgba(0, 179, 83, 0.99) 29%, rgba(0, 224, 150, 0.99) 51%, rgba(226, 230, 0, 0.99) 71%, rgba(230, 107, 0, 0.98) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ff0faf), color-stop(29%, rgba(0, 179, 83, 0.99)), color-stop(51%, rgba(0, 224, 150, 0.99)), color-stop(71%, rgba(226, 230, 0, 0.99)), color-stop(100%, rgba(230, 107, 0, 0.98)));
+  background: -webkit-linear-gradient(45deg, #ff0faf 0%, rgba(0, 179, 83, 0.99) 29%, rgba(0, 224, 150, 0.99) 51%, rgba(226, 230, 0, 0.99) 71%, rgba(230, 107, 0, 0.98) 100%);
+  background: -o-linear-gradient(45deg, #ff0faf 0%, rgba(0, 179, 83, 0.99) 29%, rgba(0, 224, 150, 0.99) 51%, rgba(226, 230, 0, 0.99) 71%, rgba(230, 107, 0, 0.98) 100%);
+  background: -ms-linear-gradient(45deg, #ff0faf 0%, rgba(0, 179, 83, 0.99) 29%, rgba(0, 224, 150, 0.99) 51%, rgba(226, 230, 0, 0.99) 71%, rgba(230, 107, 0, 0.98) 100%);
+  background: linear-gradient(45deg, #ff0faf 0%, rgba(0, 179, 83, 0.99) 29%, rgba(0, 224, 150, 0.99) 51%, rgba(226, 230, 0, 0.99) 71%, rgba(230, 107, 0, 0.98) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0faf', endColorstr='#e66b00', GradientType=1 ); }
+
+/*# sourceMappingURL=style.css.map */

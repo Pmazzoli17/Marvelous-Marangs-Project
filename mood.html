@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>#mood application</title>
 
-	// Updated on January 23, 2017 by MAL
+
 	<!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
   -->
@@ -20,41 +20,50 @@
 <style>@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');</style>
 
   <!-- CSS -->
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="assets/style.css">
   <!-- <link rel="stylesheet" type="text/css" href="assets/style.scss"> -->
   
+=======
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ 
+>>>>>>> cb32cfb4bcdd8576f834b554606d026df61a0ba1
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 
-
-
-
 </head>
+
 <body>
 	<div class="container">
 	<!-- #Mood Jumbotron -->
-    	<div class="jumbotron">
+    	<div class="jumbotron" id="angle-gradient-svg">
       		<div class="container">
         		<h1 class="text-center" id="pageTitle"><strong>#Mood</strong></h1>
 	     	</div>
       	</div>
 
       	<div class="text-center">
+      	<div class="panel-body">
+      		<form class="form-inline">
+              <form role="form">
+                <div class="form-group">
 
-      	<!-- Email input field -->     	
-      		<!-- Email: <label for="email"><input type="text" name="email"  id="userEmail" type/><input id="submit" value="Submit" type="submit"></label> -->
-      		<label for="email-input">Email: </label>
-            <input id="userEmail" input type="email">
-            <button id="submit">Submit</button>
-      	</div>
-		<div>
-			
+                <label for="email-input">Email:</label>
+                  <input class="form-control" id="email-input" type="email">
+                </div>
+                <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+        	</form>
+            </div>
+          </div>
+        </div>
+        
+		
+		<div>		
 			<h1 class="text-center" id="question">What's your mood?</h1>
-
 		</div>
 
     	<br>
@@ -63,11 +72,10 @@
 				<button data-mood="mad" id="angry" type="button" value="angry" class="btn btn-danger">Angry</button> 
 				<button data-mood="stressed" id="anxious" type="button" value="anxious" class="btn btn-warning">Anxious</button>      		
 				<button data-mood="joyful" id="happy" type="button" value="happy" class="btn btn-success">Happy</button>
-				<button data-mood="love" id="romantic" type="button" value="romantic"class="btn btn-danger" style="background-color: pink">Romantic</button>
 				<button data-mood="love" id="romantic" type="button" value="romantic" class="btn btn-danger">Romantic</button>
 				<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 				<!-- Trigger the modal with a button -->
-  				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+  				<button id="help" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
 				
 				<!-- Help Modal -->
 			  <div class="modal fade" id="myModal" role="dialog">
@@ -99,20 +107,37 @@
 <br>
 		<!-- Div to contain stated mood -->
 
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+				<h2 class="text-center" id="chosenMood"></h2>
+		</div>
+ -->
+
+
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+				<h2 class="text-center" id="chosenMood"></h2>
+		</div> -->
+
+
+
+
 		<!--<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2> 
 		</div> -->
 		<br>
 		<!-- <h2></h2> -->
+
+
+		<!-- Code may be duplicated in CSS. -->
   		<div class="panel panel-default">
     		<div class="panel-body">
 			<h4 id="chosenMood" class="text-center"></h4>
     		</div>
   		</div>
-
+		<!--Code may be duplicated in CSS  -->
 		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
+
 </div>
 				
     	</div>
@@ -124,17 +149,38 @@
    
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
+
+<!-- Code may be duplicated in css. -->
+
+					<div class="embed-responsive embed-responsive-16by9">
+		    			<iframe class="embed-responsive-item" src=""></iframe>
+
 					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
 		    			<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/3MteSlpxCpo"></iframe>
+
 					</div>
     			</div>
 
 			
 			<!-- images Div -->
 
+<<<<<<< HEAD
     			<div id="output" class="col-sm-6" > 
 					<h2>Images for your mood</h2>
       			
+=======
+      			<h2>Images for your mood</h2>
+      			<!-- Images Temp outline placeholder -->
+
+	<!-- Code may be duplicate in CSS. -->
+
+					<div class="embed-responsive embed-responsive-16by9">
+					    <iframe class="embed-responsive-item" src=""></iframe>
+			<!-- Code may be duplicated in CSS. -->
+					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
+					    <iframe id="imageholder" class="embed-responsive-item" src="https://www.youtube.com/embed/mkfnTeBB6EI"></iframe>
+					</div>
+>>>>>>> cb32cfb4bcdd8576f834b554606d026df61a0ba1
 				</div>
   			</div>
 		</div>
@@ -143,11 +189,5 @@
 
 <script src="mood.js"></script>
 
-<!-- /* 
-$("#modal").width(150)
-			.text("I am altering the body of text")
-			.height(50)
-			.fadeIn(2000);
-			*/	 -->
 </body>
 </html>

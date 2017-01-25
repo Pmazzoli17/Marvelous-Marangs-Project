@@ -29,4 +29,10 @@
 
 #angry {
 	background-color: red;
+
+}
+
+#output img {
+	width: 100%;
+	height: auto;
 }

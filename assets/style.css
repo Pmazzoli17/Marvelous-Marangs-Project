@@ -20,6 +20,16 @@
   border: 1px solid #000000; }
 
 #angry {
+
+	background-color: red;
+
+}
+
+#output img {
+	width: 100%;
+	height: auto;
+}
+
   background-color: red;
   border: 1px solid #000000; }
 

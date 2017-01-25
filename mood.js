@@ -100,6 +100,46 @@
  
           $("#video-link").replaceWith('<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/'+ videoID +'"></iframe>');
         });
+        // Image ajax goes here
+
+        var apiKey = 'j878g39yx378pa77djthzzpn';
+        $.ajax({
+          type:'GET',
+          url:"https://api.gettyimages.com/v3/search/images/creative?phrase=kitties",
+          beforeSend: function (request) {
+              request.setRequestHeader("Api-Key", apiKey);
+           }})
+          .done(function(data){
+              console.log("Success with data");
+              console.log(data);
+              var imageURL=data.images[0].display_sizes[0].uri;
+              console.log("This is the image before append to page " + imageURL);
+
+              var image = document.createElement("img");
+              image.src = imageURL;
+              //image.height or image.css
+              console.log("This is the full image tag: " + image); 
+
+
+
+          // Change this to write into second div
+           //  $("#output").replaceWith("<img src='" + data.images[0].display_sizes[0].uri + "'/>");
+             $("#output").append(image); 
+             console.log("This is the image after append to page " + imageURL);
+             console.log("got to image");
+                      })
+
+   .fail(function(data){
+
+       alert(JSON.stringify(data,2))
+
+   });
+
+
+
+
+
+        // End of images ajax
       });
 
 // Getty Ajax Buttons

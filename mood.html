@@ -21,8 +21,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/style.scss">
-  
+ -->  
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   
@@ -63,11 +62,13 @@
 				<button data-mood="mad" id="angry" type="button" value="angry" class="btn btn-danger">Angry</button> 
 				<button data-mood="stressed" id="anxious" type="button" value="anxious" class="btn btn-warning">Anxious</button>      		
 				<button data-mood="joyful" id="happy" type="button" value="happy" class="btn btn-success">Happy</button>
+<!-- Look at code; make sure it isn't duplicated. Fix and put style into CSS-->
 				<button data-mood="love" id="romantic" type="button" value="romantic"class="btn btn-danger" style="background-color: pink">Romantic</button>
+
 				<button data-mood="love" id="romantic" type="button" value="romantic" class="btn btn-danger">Romantic</button>
 				<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 				<!-- Trigger the modal with a button -->
-  				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+  				<button id="help" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
 				
 				<!-- Help Modal -->
 			  <div class="modal fade" id="myModal" role="dialog">
@@ -99,20 +100,37 @@
 <br>
 		<!-- Div to contain stated mood -->
 
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+				<h2 class="text-center" id="chosenMood"></h2>
+		</div>
+ -->
+
+
+		<!-- <div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+				<h2 class="text-center" id="chosenMood"></h2>
+		</div> -->
+
+
+
+
 		<!--<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2> 
 		</div> -->
 		<br>
 		<!-- <h2></h2> -->
+
+
+		<!-- Code may be duplicated in CSS. -->
   		<div class="panel panel-default">
     		<div class="panel-body">
 			<h4 id="chosenMood" class="text-center"></h4>
     		</div>
   		</div>
-
+		<!--Code may be duplicated in CSS  -->
 		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
+
 </div>
 				
     	</div>
@@ -124,8 +142,15 @@
    
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
+
+<!-- Code may be duplicated in css. -->
+
+					<div class="embed-responsive embed-responsive-16by9">
+		    			<iframe class="embed-responsive-item" src=""></iframe>
+
 					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
 		    			<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/3MteSlpxCpo"></iframe>
+
 					</div>
     			</div>
 
@@ -135,6 +160,12 @@
 
       			<h2>Images for your mood</h2>
       			<!-- Images Temp outline placeholder -->
+
+	<!-- Code may be duplicate in CSS. -->
+
+					<div class="embed-responsive embed-responsive-16by9">
+					    <iframe class="embed-responsive-item" src=""></iframe>
+			<!-- Code may be duplicated in CSS. -->
 					<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
 					    <iframe id="imageholder" class="embed-responsive-item" src="https://www.youtube.com/embed/mkfnTeBB6EI"></iframe>
 					</div>
@@ -146,11 +177,5 @@
 
 <script src="mood.js"></script>
 
-<!-- /* 
-$("#modal").width(150)
-			.text("I am altering the body of text")
-			.height(50)
-			.fadeIn(2000);
-			*/	 -->
 </body>
 </html>

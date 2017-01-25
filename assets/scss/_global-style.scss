@@ -1,0 +1,79 @@
+// $blue: #113F8C;
+// $seaGreen: #01A4A4;
+// $notQuiteBlue: #00A1CB;
+// $lightGreen: #61AE24;
+// $yellow: #D0D102;
+// $green: #32742C;
+ $pink: #D70060;
+ $black: #000000;
+// .jumbotron {
+// 	@include background:(linear-gradient(to bottom, $blue, $seaGreen, $notQuiteBlue, $lightGreen, $yellow, $green, $pink))
+// }
+
+// body {
+// 	@include background(linear-gradient(to bottom, red, orange, green, pink, blue));
+// }
+
+.jumbotron {
+	background-color: green; 
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#pageTitle {
+	font-family: 'Bungee Inline', cursive;
+	font-size: 100px;
+}
+
+#question {
+	font-family: 'Bungee Shade', cursive;
+}
+
+.btn-danger {
+	background-color: $pink;
+	border: 1px solid $black;
+}
+
+#angry {
+	background-color: red;
+	border: 1px solid $black;
+}	
+
+#anxious {
+	border: 1px solid $black;
+}
+
+#happy {
+	border: 1px solid $black;
+}
+
+#romantic {
+	border: 1px solid $black;
+}
+
+#sad {
+	border: 1px solid $black;
+}
+
+#help {
+	border: 1px solid $black;
+}
+
+.embed-responsive {
+	border: 1px solid $black
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Bungee Shade', cursive;
+}
+=======
+@import "variables";
+@import "global-style";
+
+// sass --watch assets/scss:assets/css

@@ -1,5 +1,5 @@
 
-  // Initialize Firebase
+// Initialize Firebase
   var config = {
     apiKey: "AIzaSyB5mnXOmk-joFswh_H0tztREWkzOhRahOw",
     authDomain: "validation-67fa0.firebaseapp.com",
@@ -16,7 +16,8 @@
     var email = "";
 
     // Capture Button Click
-    $("#add-user").on("click", function() {
+    $("#add-user").on("click", function(event) {
+      event.preventDefault();
 
     // Code for storing and retrieving the most recent email.
 
@@ -238,70 +239,70 @@
 
 $("#angry").click(function(){
 
-	// Get mood button value
-	var buttonResult = $(this).prop("value");
+  // Get mood button value
+  var buttonResult = $(this).prop("value");
 
-	// Log mood button value to console 
-	console.log("Your mood is  " + $(this).prop("value"));
+  // Log mood button value to console 
+  console.log("Your mood is  " + $(this).prop("value"));
 // });
-	 
-	
-	// Write mood chosen into chosenMood div
-	$("#chosenMood").html("Your mood is  "+ buttonResult + " check out the sounds & images we've chosen"); 
+   
+  
+  // Write mood chosen into chosenMood div
+  $("#chosenMood").html("Your mood is  "+ buttonResult + " check out the sounds & images we've chosen"); 
   
 });
     
   
  $("#anxious").click(function(){
 
- 	// Get mood button value
-	var buttonResult = $(this).prop("value");
+  // Get mood button value
+  var buttonResult = $(this).prop("value");
 
-	// Log mood button value to console 
-	console.log("You are feeling  " + buttonResult);
-	
+  // Log mood button value to console 
+  console.log("You are feeling  " + buttonResult);
+  
 
-	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your mood is  "+ buttonResult + " check out the sounds and images we've chosen");
-	  
- });			
-		
+  // Write mood chosen into chosenMood div
+  $("#chosenMood").text("Your mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+    
+ });      
+    
 $("#happy").click(function(){
 
-	// Get mood button value
-	var buttonResult = $(this).prop("value");
+  // Get mood button value
+  var buttonResult = $(this).prop("value");
 
-	// Log mood button value to console
-	console.log("You are feeling  " + buttonResult);
+  // Log mood button value to console
+  console.log("You are feeling  " + buttonResult);
 
-	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
-	  
- });	
+  // Write mood chosen into chosenMood div
+  $("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+    
+ });  
 
 $("#romantic").click(function(){
 
-	// Get mood button value
-	var buttonResult = $(this).prop("value");
+  // Get mood button value
+  var buttonResult = $(this).prop("value");
 
-	// Log mood button value to console
-	console.log("You are feeling  " + buttonResult);
-	
-	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
-	  
- });	
+  // Log mood button value to console
+  console.log("You are feeling  " + buttonResult);
+  
+  // Write mood chosen into chosenMood div
+  $("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+    
+ });  
 
 $("#sad").click(function(){
 
-	// Get mood button value
-	var buttonResult = $(this).prop("value");
+  // Get mood button value
+  var buttonResult = $(this).prop("value");
 
-	// Log mood button value to console
-	console.log("You are feeling  " + buttonResult);
-	
-	// Write mood chosen into chosenMood div
-	$("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
+  // Log mood button value to console
+  console.log("You are feeling  " + buttonResult);
+  
+  // Write mood chosen into chosenMood div
+  $("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
     
  });
 
@@ -320,8 +321,3 @@ $("#sad").click(function(){
 
 
 // Images Div
-
-
-
-
-

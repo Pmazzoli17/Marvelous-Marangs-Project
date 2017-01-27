@@ -1,6 +1,8 @@
 
+
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+
 
 
 .jumbotron {
@@ -36,6 +38,22 @@
 #angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
 	border: 1px solid $black;
 }
+
+
+.embed-responsive {
+	border: 1px solid $black
+
+}
+.imgcontainer {	
+		width: 100%;
+		height: 247px;
+	 	background-color: gray;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+		text-align: center;
+}
+
 
 h2 {
 	text-align: center;

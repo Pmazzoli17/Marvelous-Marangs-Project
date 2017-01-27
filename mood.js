@@ -102,10 +102,44 @@
         });
         // Image ajax goes here
 
+        console.log("just checking to see if I still have gooo value for x  " + x);
+        var y = x;
+
+        // Setting the queryURL for images API - ML 
+          var angryimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=mad";
+          var anxiousimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=upset";
+          var happyimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=fun";
+          var romanticimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=romantic";
+          var sadimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=sad";
+
+        // These conditional statements set the queryURL string for images based on 
+        // the type of mood that was selected by the user - ML
+
+          if (y==="mad") {
+            iqueryURL=angryimageQueryURL;
+            console.log("this is the mad URL " + queryURL);
+            } 
+            else if (y=="stressed"){
+              iqueryURL=anxiousimageQueryURL;
+              console.log("this is the stressed  URL " + queryURL);
+              }
+            else if (y==="joyful") {
+              iqueryURL=happyimageQueryURL;
+              console.log("this is the joyful  URL " + queryURL);
+              }
+            else if (y==="love") {
+              iqueryURL=romanticimageQueryURL;
+              console.log("this is the joyful  URL " + queryURL);
+              }
+            else {
+              iqueryURL=sadimageQueryURL;
+            }  
+
+
         var apiKey = 'j878g39yx378pa77djthzzpn';
         $.ajax({
           type:'GET',
-          url:"https://api.gettyimages.com/v3/search/images/creative?phrase=kitties",
+          url: iqueryURL,
           beforeSend: function (request) {
               request.setRequestHeader("Api-Key", apiKey);
            }})
@@ -124,6 +158,7 @@
 
           // Change this to write into second div
            //  $("#output").replaceWith("<img src='" + data.images[0].display_sizes[0].uri + "'/>");
+             $("#output").empty(); 
              $("#output").append(image); 
              console.log("This is the image after append to page " + imageURL);
              console.log("got to image");
@@ -146,12 +181,43 @@
 
     // This function handles events where a mood button is clicked -ML
         $("button").on("click", function() {
-          var x = $(this).data("mood");
+          var y = $(this).data("mood");
+
+          // Debug code
+          console.log("y =   " + y);    
 
         // Setting the queryURL for images API - ML 
-          var queryURL = "https://api.gettyimages.com/v3/search/images?phrase=fish"
+          var angryimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=mad";
+          var anxiousimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=upset";
+          var happyimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=fun";
+          var romanticimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=romantic";
+          var sadimageQueryURL = "https://api.gettyimages.com/v3/search/images/creative?phrase=sad";
 
-        // Creating an AJAX call for the specific video -ML
+        // These conditional statements set the queryURL string for images based on 
+        // the type of mood that was selected by the user - ML
+
+          if (y==="mad") {
+            queryURL=angryimageQueryURL;
+            console.log("this is the mad URL " + queryURL);
+            } 
+            else if (y=="stressed"){
+              queryURL=anxiousimageQueryURL;
+              console.log("this is the stressed  URL " + queryURL);
+              }
+            else if (y==="joyful") {
+              queryURL=happyimageQueryURL;
+              console.log("this is the joyful  URL " + queryURL);
+              }
+            else if (y==="love") {
+              queryURL=romanticimageQueryURL;
+              console.log("this is the joyful  URL " + queryURL);
+              }
+            else {
+              queryURL=sadimageQueryURL;
+            }  
+
+
+        // Creating an AJAX call for the specific image -ML
         $.ajax({
           url: queryURL,
           method: "GET",
@@ -161,7 +227,8 @@
         }).done(function(response) {
 
         // Debug code - ML
-        // console.log(response);
+        console.log("this URL was used in ajax  " + queryURL);
+       console.log(response);
         });
       });
 

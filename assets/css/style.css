@@ -29,18 +29,27 @@
 #angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
   border: 1px solid #000000; }
 
+.embed-responsive {
+  border: 1px solid gray; }
+
+.embed-responsive-img {
+  border: gray;
+  width: 100%;
+  height: 247px; }
+
 .imgcontainer {
   width: 100%;
-  height: 247px;
+  height: 315px;
   background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  margin-bottom: 5px; }
 
 h2 {
   text-align: center;
-  font-family: 'Bungee Shade', cursive; }
+  font-family: 'Bungee Shade', cursive;
+  margin-top: 2px; }
 
 #angle-gradient-svg {
   background: #ff0faf;

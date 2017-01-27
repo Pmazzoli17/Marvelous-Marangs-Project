@@ -1,4 +1,10 @@
 
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+
+
+
 .jumbotron {
 	background-color: green; 
 	color: white;
@@ -11,12 +17,12 @@
 }
 
 #pageTitle {
-	font-family: 'Bungee Inline', cursive;
+	font-family: $font-title;
 	font-size: 100px;
 }
 
 #question {
-	font-family: 'Bungee Shade', cursive;
+	font-family: $font-mood;
 }
 
 .btn-danger {
@@ -26,28 +32,13 @@
 
 #angry {
 	background-color: red;
-	border: 1px solid $black;
+	&:hover{background-color: $redHover;}
 }	
 
-#anxious {
+#angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
 	border: 1px solid $black;
 }
 
-#happy {
-	border: 1px solid $black;
-}
-
-#romantic {
-	border: 1px solid $black;
-}
-
-#sad {
-	border: 1px solid $black;
-}
-
-#help {
-	border: 1px solid $black;
-}
 
 .embed-responsive {
 	border: 1px solid $black
@@ -63,14 +54,16 @@
 		text-align: center;
 }
 
+
 h2 {
 	text-align: center;
 	font-family: 'Bungee Shade', cursive;
+	
 }
 
 
-#angle-gradient-svg {
-  background: rgba(255,15,175,1);
+#angle-gradient-svg, {
+background: rgba(255,15,175,1);
 background: -moz-linear-gradient(45deg, rgba(255,15,175,1) 0%, rgba(0,179,83,0.99) 29%, rgba(0,224,150,0.99) 51%, rgba(226,230,0,0.99) 71%, rgba(230,107,0,0.98) 100%);
 background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,15,175,1)), color-stop(29%, rgba(0,179,83,0.99)), color-stop(51%, rgba(0,224,150,0.99)), color-stop(71%, rgba(226,230,0,0.99)), color-stop(100%, rgba(230,107,0,0.98)));
 background: -webkit-linear-gradient(45deg, rgba(255,15,175,1) 0%, rgba(0,179,83,0.99) 29%, rgba(0,224,150,0.99) 51%, rgba(226,230,0,0.99) 71%, rgba(230,107,0,0.98) 100%);
@@ -80,18 +73,5 @@ background: linear-gradient(45deg, rgba(255,15,175,1) 0%, rgba(0,179,83,0.99) 29
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0faf', endColorstr='#e66b00', GradientType=1 );
 }
 
-// #angle-gradient-svg {
-//   background-image: -svg(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
-//   width: 80px;
-//   height: 80px;
-// }
-
-
-// .jumbotron {
-// 	@include background:(linear-gradient(to bottom, $blue, $seaGreen, $notQuiteBlue, $lightGreen, $yellow, $green, $pink))
-// }
-
-// @import "variables";
-// @import "global-style";
 
 // sass --watch assets/scss:assets/css

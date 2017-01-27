@@ -5,19 +5,11 @@
 	<title>#mood application</title>
 
 
-	<!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
-  -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');</style>
-<style>@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');</style>
 
   <!-- CSS -->
 
@@ -64,7 +56,7 @@
 	<div>		
 		<h1 class="text-center" id="question">What's your mood?</h1>
 	</div>
-
+    	
     <br>
     <!-- BEGIN MOOD BUTTON DIV -->
 	<div class="text-center"> 
@@ -75,6 +67,7 @@
 			<button data-mood="somber" id="sad" type="button" value="sad" class="btn btn-info">Sad</button>
 			<!-- Trigger the modal with a button -->
   			<button id="help" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Help</button>	
+
 				
 		<!-- BEGIN HELP MODAL DIV -->
 		<div class="modal fade" id="myModal" role="dialog">
@@ -100,22 +93,23 @@
 		    </div>
 		</div>  <!-- END HELP MODAL DIV -->
  
-		<br>
-		
-		<br>
-		<!-- <h2></h2> -->
-		<!-- Code may be duplicated in CSS. -->
-  		<div class="panel panel-default">
+
+<br><br>
+		<div class="panel panel-default">
     		<div class="panel-body">
 			<h4 id="chosenMood" class="text-center"></h4>
     		</div>
   		</div>
-		<!--Code may be duplicated in CSS  -->
-		<div style="width:800px;margin-left:165;background:#F9EECF;border:1px black;text-align:center" class="text-center">
+		
+		<div class="text-center">
 				<h2 class="text-center" id="chosenMood"></h2>
 		</div>
 
+
+		
+
 	</div>  <!-- END MOOD BUTTON DIV -->
+
 				
     
     	<!-- mood audio and image Div -->
@@ -128,16 +122,17 @@
    
       			<h2>Music for your mood</h2>
       			<!-- Audio Temp outline placeholder -->
+					<div class="embed-responsive embed-responsive-16by9">
 
-<!-- Code may be duplicated in css. -->
+		    			<iframe class="embed-responsive-item" src=""></iframe>
 
 					<div class="embed-responsive embed-responsive-16by9">
-			    		
-							<div style="border: 1px solid black" class="embed-responsive embed-responsive-16by9">
-			    				<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/3MteSlpxCpo"></iframe>
-							</div>
-	    			</div>
+		    			<iframe id="video-link" class="embed-responsive-item" src="https://www.youtube.com/embed/3MteSlpxCpo"></iframe>
+
+					</div>
+    			</div>
 				</div>  <!-- END AUDIO COLUMN DIV -->
+
 			
 			<!-- BEGIN IMAGES COLUMN DIV -->
 
@@ -146,14 +141,17 @@
       			<h2>Images for your mood</h2>
       			<div id="output" class="imgcontainer">
 
-				     				
-      			</div>
-
-
-					
-
-				</div>
+					<div class="embed-responsive embed-responsive-16by9">
+					    <iframe class="embed-responsive-item" src=""></iframe>
+			
+					<div class="embed-responsive embed-responsive-16by9">
+					    <iframe id="imageholder" class="embed-responsive-item" src="https://www.youtube.com/embed/mkfnTeBB6EI"></iframe>
+					</div>
+					</div>
+  					</div>
+		</div>
   			</div>  <!-- END IMAGES COLUMN DIV -->
+
 
 		</div>  <!-- END AUDIO/IMAGE ROW DIV -->
 

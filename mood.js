@@ -16,8 +16,8 @@
     var email = "";
 
     // Capture Button Click
-    $("#add-user").on("click", function(event) {
-      event.preventDefault();
+    $("#add-user").on("click", function() {
+      // event.preventDefault();
 
     // Code for storing and retrieving the most recent email.
 
@@ -30,6 +30,8 @@
 
       // Don't refresh the page!
       // return false;
+
+      // $("#email-input").val(" ");
     })
 
     database.ref().on("child_added", function(snapshot) {

@@ -30,10 +30,7 @@
 
 #angry {
 	background-color: red;
-}
-// WHY?!! Can't get the hover color to work. Moving on.
-#angry :hover {
-	background-color: $redHover;
+	&:hover{background-color: $redHover;}
 }	
 
 #angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
@@ -43,6 +40,7 @@
 h2 {
 	text-align: center;
 	font-family: 'Bungee Shade', cursive;
+	
 }
 
 

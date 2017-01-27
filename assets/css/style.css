@@ -23,9 +23,8 @@
 
 #angry {
   background-color: red; }
-
-#angry :hover {
-  background-color: #b20000; }
+  #angry:hover {
+    background-color: #b20000; }
 
 #angry, #anxious, #happy, #romantic, #sad, #help, .embed-responsive {
   border: 1px solid #000000; }

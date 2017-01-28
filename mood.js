@@ -28,9 +28,6 @@
         dateAdded: firebase.database.ServerValue.TIMESTAMP
         })
 
-      // Don't refresh the page!
-      // return false;
-
       // $("#email-input").val(" ");
     })
 
@@ -38,7 +35,6 @@
     $(".well").append("<p>"+snapshot.val().email+"</p>");
     $(".well").append("<hr>");
     })
-
 
     // Create Firebase "watcher" Hint: .on("value")
       firebase.database().ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
@@ -48,7 +44,7 @@
 
     // Change the HTML to reflect in the most recent area
       $("#email-display").html(snapshot.val().email);
-})
+    })
 
 // Process Mood Buttons
 
@@ -138,7 +134,6 @@
               iqueryURL=sadimageQueryURL;
             }  
 
-
         var apiKey = 'j878g39yx378pa77djthzzpn';
         $.ajax({
           type:'GET',
@@ -157,8 +152,6 @@
               //image.height or image.css
               console.log("This is the full image tag: " + image); 
 
-
-
           // Change this to write into second div
            //  $("#output").replaceWith("<img src='" + data.images[0].display_sizes[0].uri + "'/>");
              $("#output").empty(); 
@@ -172,11 +165,6 @@
        alert(JSON.stringify(data,2))
 
    });
-
-
-
-
-
         // End of images ajax
       });
 
@@ -219,7 +207,6 @@
               queryURL=sadimageQueryURL;
             }  
 
-
         // Creating an AJAX call for the specific image -ML
         $.ajax({
           url: queryURL,
@@ -234,7 +221,6 @@
        console.log(response);
         });
       });
-
 
 // The search URL for the anxious button. 
 // GET https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=20&order=relevance&q=relax%7Cmeditate%7Ccalm&safeSearch=none&type=video&videoCaption=any&videoDefinition=any&videoDimension=any&videoDuration=any&videoEmbeddable=true&videoLicense=any&videoSyndicated=any&videoType=any&key={YOUR_API_KEY}
@@ -307,19 +293,3 @@ $("#sad").click(function(){
   $("#chosenMood").text("Your current mood is  "+ buttonResult + " check out the sounds and images we've chosen");
     
  });
-
-
-
-
- 
- // Mood audio and image Div 
-
- // Images Div
-
-
-// Mood audio and image Div 
-
-
-
-
-// Images Div
